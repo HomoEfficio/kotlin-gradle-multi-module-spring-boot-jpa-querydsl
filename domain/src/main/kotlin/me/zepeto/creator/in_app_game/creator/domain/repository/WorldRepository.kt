@@ -1,4 +1,4 @@
-package me.zepeto.creator.in_app_game.creator.domain
+package me.zepeto.creator.in_app_game.creator.domain.repository
 
 import me.zepeto.creator.in_app_game.creator.domain.model.World
 import org.springframework.data.jpa.repository.JpaRepository

@@ -1,7 +1,7 @@
 package me.zepeto.creator.in_app_game.creator.query.service
 
 import me.zepeto.creator.in_app_game.creator.domain.model.World
-import me.zepeto.creator.in_app_game.creator.domain.WorldRepository
+import me.zepeto.creator.in_app_game.creator.domain.repository.WorldRepository
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
