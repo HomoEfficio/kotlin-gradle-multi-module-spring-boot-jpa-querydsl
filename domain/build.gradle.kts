@@ -50,4 +50,5 @@ tasks.bootJar {
 
 tasks.jar {
     enabled = true
+    archiveBaseName.set("in-app-game-creator-domain")
 }
