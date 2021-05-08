@@ -7,6 +7,7 @@ plugins {
 
     kotlin("plugin.spring") version "1.4.32"
     kotlin("plugin.jpa") version "1.4.32"
+    kotlin("plugin.allopen") version "1.4.32"
 }
 
 group = "me.zepeto.creator"
@@ -51,4 +52,10 @@ tasks.bootJar {
 tasks.jar {
     enabled = true
     archiveBaseName.set("in-app-game-creator-domain")
+}
+
+allOpen {
+    annotation("javax.persistence.Entity")
+    annotation("javax.persistence.MappedSuperclass")
+    annotation("javax.persistence.Embeddable")
 }
