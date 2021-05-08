@@ -9,3 +9,4 @@
 
 rootProject.name = "creator-in-app-game-creator"
 include("app", "list", "utilities")
+include("domain")
