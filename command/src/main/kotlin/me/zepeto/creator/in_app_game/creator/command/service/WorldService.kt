@@ -1,6 +1,6 @@
 package me.zepeto.creator.in_app_game.creator.command.service
 
-import me.zepeto.creator.in_app_game.creator.domain.World
+import me.zepeto.creator.in_app_game.creator.domain.model.World
 import me.zepeto.creator.in_app_game.creator.domain.WorldRepository
 import org.springframework.stereotype.Service
 

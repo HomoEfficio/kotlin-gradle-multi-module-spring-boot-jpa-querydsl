@@ -1,4 +1,4 @@
-package me.zepeto.creator.in_app_game.creator.domain
+package me.zepeto.creator.in_app_game.creator.domain.model
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
