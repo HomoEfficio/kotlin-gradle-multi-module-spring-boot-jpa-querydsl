@@ -55,3 +55,7 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+tasks.bootJar {
+    archiveBaseName.set("in-app-game-creator-command")
+}
