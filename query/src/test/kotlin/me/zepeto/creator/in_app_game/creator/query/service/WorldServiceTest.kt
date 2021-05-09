@@ -14,17 +14,24 @@ import org.springframework.test.context.jdbc.Sql
 @DataJpaTest
 @Import(WorldService::class)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@Sql(scripts = ["classpath:sql/data-h2.sql"])
 internal class WorldServiceTest {
 
     @Autowired
     private lateinit var worldService: WorldService
 
     @Test
-    @Sql(scripts = ["classpath:sql/data-h2.sql"])
     internal fun `월드 페이징 조회`() {
         val pagedResult: Page<World> = worldService.findAllByName("월드", PageRequest.of(0, 2))
 
         assertThat(pagedResult.totalElements).isEqualTo(5)
         assertThat(pagedResult.totalPages).isEqualTo(3)
+    }
+
+    @Test
+    internal fun `월드 전체 조회`() {
+        val pagedResult: List<World> = worldService.findAll()
+
+        assertThat(pagedResult.size).isEqualTo(6)
     }
 }

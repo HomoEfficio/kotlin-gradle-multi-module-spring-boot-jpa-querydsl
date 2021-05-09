@@ -14,4 +14,8 @@ class WorldService(
     fun findAllByName(name: String, pageable: Pageable): Page<World> {
         return worldRepository.findAllByName(name, pageable)
     }
+
+    fun findAll(): List<World> {
+        return worldRepository.findAll()
+    }
 }
